@@ -1,0 +1,12 @@
+version: "3"
+services:
+  agent:
+    image: okteto/agent:1.0
+    build: .
+    environment:
+      - CONFIG
+      - COMPOSE
+      - STACK
+      - REGION
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
